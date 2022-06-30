@@ -8,7 +8,16 @@
 
     <!-- activity_main -->
     <string name="main_activity_title">Travel Plan And History</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <!-- activity_main -->
+
+    <!-- activity_add_plan -->
+    <string name="add_plan_activity_title">여행계획 추가하기</string>
+    <string name="add_plan_tv_title">이번 여행의 제목은?</string>
+    <string name="add_plan_et_title_hint">ex)제주도 한달살기!</string>
+    <string name="add_plan_tv_start_date_title">여행 시작!</string>
+    <string name="add_plan_tv_start_date">ex)2022/06/30</string>
+    <string name="add_plan_tv_end_date_title">여행 끝!</string>
+    <string name="add_plan_tv_end_date">ex)2022/07/04</string>
+    <string name="btn_add_travel_plan">일정 추가하기</string>
+    <!-- activity_add_plan -->
 </resources>
