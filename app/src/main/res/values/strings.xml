@@ -20,4 +20,10 @@
     <string name="add_plan_tv_end_date">ex)2022/07/04</string>
     <string name="btn_add_travel_plan">일정 추가하기</string>
     <!-- activity_add_plan -->
+
+    <!-- item_travel_plan -->
+    <string name="item_plan_title">이번 여행의 제목</string>
+    <string name="item_plan_start_date">시작날짜</string>
+    <string name="item_plan_end_date">종료날짜</string>
+    <!-- item_travel_plan -->
 </resources>
