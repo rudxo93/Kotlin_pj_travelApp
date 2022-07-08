@@ -66,6 +66,7 @@ class TravelPlanFragment : Fragment() {
                     CoroutineScope(Dispatchers.IO).launch {
                         addPlanViewModel.insert(addPlan)
                     }
+                    Toast.makeText(context, "일정이 추가되었습니다.", Toast.LENGTH_SHORT).show()
                 }
             }
         }
