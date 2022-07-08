@@ -11,6 +11,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.duran.travelapp.R
 import com.duran.travelapp.addPlan.AddPlanActivity
 import com.duran.travelapp.databinding.FragmentTravelPlanBinding
@@ -25,6 +26,7 @@ class TravelPlanFragment : Fragment() {
     private lateinit var hBinding: FragmentTravelPlanBinding
 
     lateinit var addPlanViewModel: AddPlanViewModel
+    lateinit var travelPlanAdapter: TravelPlanAdapter
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -55,6 +57,13 @@ class TravelPlanFragment : Fragment() {
             }
         }
 
+        addPlanViewModel.addPlanList.observe(viewLifecycleOwner) {
+            travelPlanAdapter.update(it)
+        }
+
+        travelPlanAdapter = TravelPlanAdapter(this)
+        hBinding.articleRv.layoutManager = LinearLayoutManager(context)
+        hBinding.articleRv.adapter = travelPlanAdapter
     }
 
     private val requestActivity = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
